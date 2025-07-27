@@ -63,9 +63,9 @@ To run the project, you need Docker Compose version v2.35.1 or higher. Please na
     ```docker compose up --build```
 
 This docker-compose file defines three services:
-- frontend: builds and runs the React frontend on port 3000, depends on the backend.
-- backend: builds and runs the NestJS backend on port 4000, loads environment variables, connects to the PostgreSQL database service.
-- db: runs a PostgreSQL 15 database with persistent storage and initializes the database using a SQL script.
+- **frontend**: builds and runs the React frontend on port 3000, depends on the backend.
+- **backend**: builds and runs the NestJS backend on port 4000, loads environment variables, connects to the PostgreSQL database service.
+- **db**: runs a PostgreSQL 15 database with persistent storage and initializes the database using a SQL script.
 
 A named volume postgres_data is used to persist database data.
 Note: The exposed ports should match the port configurations defined in each app’s .env file.
@@ -79,9 +79,9 @@ https://www.postman.com/grey-equinox-5383/workspace/deep-origin/collection/37208
 The request names are self-explanatory, and any additional information can be found within the requests themselves.
 
 Note that the global variables for a workspace should be manually set in your Postman client according to your usage, defaults are:
-- backendURL: **http://localhost:4000**
-- apiVersion: **api/v1**
-- frontendURL: **http://localhost:3000**
+- **backendURL**: http://localhost:4000
+- **apiVersion**: api/v1
+- **frontendURL**: http://localhost:3000
 
 other variables are set during API calls.
 
