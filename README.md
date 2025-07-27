@@ -17,7 +17,9 @@ In the **apps/frontend/**, create a .env file and assign the variables listed in
 ## Running the project locally:
 ### Pre-installation setup
 1. You need to have Node.js version 22 LTS or higher installed on your system to run this project. Please navigate to https://nodejs.org and download the appropriate version for your operating system.
+
 2. Create a PostgreSQL server instance to serve as the database, use the credentials defined from earlier Environment Configuration section.
+
 3. Create a table running the command defined in ```db/init.sql``` file.
 
 ### Installation
@@ -59,7 +61,10 @@ To run the project, navigate to both the frontend and backend directories, and i
 
 
 ## Running the project locally with Docker:
-To run the project, you need Docker Compose version v2.35.1 or higher. Please navigate to the root directory and run:
+1. To run the project, you need Docker Compose version v2.35.1 or higher. For additional information please visit https://docs.docker.com/compose/ and check the instructions.
+
+2. Considering that you already have compatible Docker Compose, please navigate to the root directory and run:
+
     ```docker compose up --build```
 
 This docker-compose file defines three services:
@@ -67,8 +72,8 @@ This docker-compose file defines three services:
 - **backend**: builds and runs the NestJS backend on port 4000, loads environment variables, connects to the PostgreSQL database service.
 - **db**: runs a PostgreSQL 15 database with persistent storage and initializes the database using a SQL script.
 
-A named volume postgres_data is used to persist database data.
-Note: The exposed ports should match the port configurations defined in each app’s .env file.
+A named volume **postgres_data** is used to persist database data.
+**Note:** The exposed ports should match the port configurations defined in each app’s .env file.
 
 
 ## Using API endpoints
