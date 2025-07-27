@@ -1,5 +1,5 @@
-This file describes the installation and running process of URL Shortener test task for Deep Origin.
-====================================================================================================
+This file describes the installation and running process of URL Shortener app for Deep Origin.
+==============================================================================================
 ## Project Description
 This project is a URL shortening service designed to take long URLs and generate short, unique aliases that redirect users to the original addresses.
 The main purpose of the service is to provide a convenient way to share lengthy URLs in a compact form.
@@ -11,8 +11,8 @@ The main purpose of the service is to provide a convenient way to share lengthy 
 - Containerization: Docker
 
 ## Environment Configuration
-In the apps/backend/.env file, create a .env file and assign the variables listed in apps/backend/.env.dist with db credentials, required backend port and corresponding frontend url.
-In the apps/frontend/.env file, create a .env file and assign the variables listed in apps/frontend/.env.dist with frontend port and backend url.
+In the **apps/backend/**, create a .env file and assign the variables listed in **apps/backend/.env.dist** with db credentials, required backend port and corresponding frontend URL.
+In the **apps/frontend/**, create a .env file and assign the variables listed in **apps/frontend/.env.dist** with frontend port and backend URL.
 
 ## Running the project locally:
 ### Pre-installation setup
@@ -60,13 +60,12 @@ To run the project, navigate to both the frontend and backend directories, and i
 
 ## Running the project locally with Docker:
 To run the project, you need Docker Compose version v2.35.1 or higher. Please navigate to the root directory and run:
-
     ```docker compose up --build```
 
 This docker-compose file defines three services:
-- frontend: Builds and runs the React frontend on port 3000, depends on the backend.
-- backend: Builds and runs the NestJS backend on port 4000, loads environment variables, connects to the PostgreSQL database service.
-- db: Runs a PostgreSQL 15 database with persistent storage and initializes the database using a SQL script.
+- frontend: builds and runs the React frontend on port 3000, depends on the backend.
+- backend: builds and runs the NestJS backend on port 4000, loads environment variables, connects to the PostgreSQL database service.
+- db: runs a PostgreSQL 15 database with persistent storage and initializes the database using a SQL script.
 
 A named volume postgres_data is used to persist database data.
 Note: The exposed ports should match the port configurations defined in each app’s .env file.
@@ -80,9 +79,9 @@ https://www.postman.com/grey-equinox-5383/workspace/deep-origin/collection/37208
 The request names are self-explanatory, and any additional information can be found within the requests themselves.
 
 Note that the global variables for a workspace should be manually set in your Postman client according to your usage, defaults are:
-- backendURL: *http://localhost:4000*
-- apiVersion: *api/v1*
-- frontendURL: *http://localhost:3000*
+- backendURL: **http://localhost:4000**
+- apiVersion: **api/v1**
+- frontendURL: **http://localhost:3000**
 
 other variables are set during API calls.
 
