@@ -8,18 +8,34 @@ body {
     background-color: #f4f4f4;
 }
 
-.shortener-component-container {
-    width: 300px;
+.shortener-container {
+    width: 330px;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.shortener-component-container-title {
-    font-size: 24px;
+.shortener-container-title-block {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
     margin-bottom: 48px;
+    align-items: center;
+}
+
+.shortener-container-title {
+    font-size: 21px;
     text-align: left;
+}
+
+.shortener-container-icon {
+    width: 24px;
+    height: auto;
+}
+
+.shortener-form-container {
+    margin-bottom: 32px;
 }
 
 .shortener-form {
@@ -47,16 +63,45 @@ body {
 .success-block-results {
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 32px;
     align-items: center;
 }
 
-.success-block-url-copy-button {
-    padding: 5px 15px 5px 15px;
-    padding-left: 15px;
-    color: #6c63ff;
+.success-block-title {
+    color: var(--primary-green);
+    font-style: italic;
+}
+
+.success-block-url-container {}
+
+.success-block-url {
+    color: var(--primary-purple);
+}
+
+.success-block-copy-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.success-block-copy-icon {
+    width: 24px;
+    height: auto;
+}
+
+.success-block-copy-button {
+    display: flex;
+    align-items: center;
+    padding: 4px 12px 4px 12px;
+    color: var(--primary-purple);
     background: white;
-    border: 1px solid #6c63ff;
+    border: 1px solid var(--primary-purple);
     border-radius: 3px;
     cursor: pointer;
+}
+
+.success-block-copy-button:hover {
+    background: var(--primary-purple);
+    color: white;
 }

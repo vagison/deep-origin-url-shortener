@@ -11,8 +11,9 @@ The main purpose of the service is to provide a convenient way to share lengthy 
 - Containerization: Docker
 
 ## Environment Configuration
-In the **apps/backend/**, create a .env file and assign the variables listed in **apps/backend/.env.dist** with db credentials, required backend port and corresponding frontend URL.
-In the **apps/frontend/**, create a .env file and assign the variables listed in **apps/frontend/.env.dist** with frontend port and backend URL.
+In the **apps/backend**, create a .env file and assign the variables listed in **apps/backend/.env.dist** with db credentials, required backend port and corresponding frontend URL.
+
+In the **apps/frontend**, create a .env file and assign the variables listed in **apps/frontend/.env.dist** with frontend port and backend URL.
 
 ## Running the project locally:
 ### Pre-installation setup
