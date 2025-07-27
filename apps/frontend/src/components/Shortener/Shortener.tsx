@@ -4,8 +4,6 @@ import './Shortener.css';
 import labels from '../../constants/labels';
 import { generateSlug } from '../../utils/shortener';
 
-import '../../../public/icons/url.svg';
-
 export default () => {
   const [url, setUrl] = useState<string>('');
   const [shortUrl, setShortUrl] = useState<string>('');
